@@ -1,0 +1,17 @@
+{
+  "name": "firebase-jcmp",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "Thomas A <thomas@needacoffee.fr>",
+  "license": "MIT",
+  "dependencies": {
+    "firebase-admin": "^4.0.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0"
+  },
+  "scripts": {
+    "babel": "babel-node main.js"
+  }
+}
