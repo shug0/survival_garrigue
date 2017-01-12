@@ -1,0 +1,2 @@
+require('./chatHooks');
+require('./playerHooks');

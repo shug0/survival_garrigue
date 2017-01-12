@@ -1,19 +1,15 @@
-import Firebase from 'firebase-admin';
+'use strict';
 
-const serviceAccount = require("./config/serviceAccountKey.json");
-
-Firebase.initializeApp({
-	credential: Firebase.credential.cert(serviceAccount),
-	databaseURL: "https://survival-garrigue.firebaseio.com",
-});
-
-const database = Firebase.database();
-
-function writeUserData(userId, name, email) {
-	database.ref('users/' + userId).set({
-		username: name,
-		email: email
-	});
+global.sg = {
+    firebase: new (require('./config/firebase')),
+    commands: jcmp.events.Call('get_command_manager')[0],
+    chat: jcmp.events.Call('get_chat')[0]
 }
 
-writeUserData(456789, 'thomas', 'thomas@needacoffee.fr');
+require('./hooks/index');
+
+
+
+
+
+
