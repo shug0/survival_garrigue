@@ -1,8 +1,8 @@
-import firebase from './lib/firebase/Firebase';
+import Firebase from './lib/firebase/Firebase';
 import workarounds from './lib/helpers/workarounds';
 
 global.sg = {
-  firebase: new(firebase),
+  firebase: new(Firebase),
   backWorks: workarounds,
   commands: jcmp.events.Call('get_command_manager')[0],
   chat: jcmp.events.Call('get_chat')[0],

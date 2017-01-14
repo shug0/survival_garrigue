@@ -1,42 +1,43 @@
 {
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module"
+  'parserOptions': {
+    'ecmaVersion': 6,
+    'sourceType': 'module'
   },
-  "env": {
-    "node": true
+  'env': {
+    'node': true
   },
-  "extends": "airbnb-base",
-  "globals": {
-    "Vector2": false,
-    "Vector2f": false,
-    "Vector3": false,
-    "Vector3f": false,
-    "Vector4": false,
-    "Vector4f": false,
-    "RGB": false,
-    "RGBA": false,
-    "Vehicle": false,
-    "POI": false,
-    "GameObject": false,
-    "Checkpoint": false,
-    "g_packages": false,
-    "events": false,
-    "Package": false,
-    "Blip": false,
-    "jcmp": false,
-    "dm": false,
-    "backWorks": false,
-    "log": false,
-    "utility": false
+  'extends': 'airbnb-base',
+  'globals': {
+    'Vector2': false,
+    'Vector2f': false,
+    'Vector3': false,
+    'Vector3f': false,
+    'Vector4': false,
+    'Vector4f': false,
+    'RGB': false,
+    'RGBA': false,
+    'Vehicle': false,
+    'POI': false,
+    'GameObject': false,
+    'Checkpoint': false,
+    'g_packages': false,
+    'events': false,
+    'Package': false,
+    'Blip': false,
+    'jcmp': false,
+    'dm': false,
+    'backWorks': false,
+    'log': false,
+    'utility': false,
+    'sg': false,
   },
-  "rules": {
-    "new-cap": [1, {                 // http://eslint.org/docs/rules/new-cap
-      "capIsNewExceptions": ["SetRGBAColor", "Call", "Add", "Kick", "SendChatMessage", "Respawn", "GiveWeapon", "AddRemoteCallable", "CallRemote", "SetTime", "Destroy" ]
+  'rules': {
+    'new-cap': [1, {
+      'capIsNewExceptions': ['SetRGBAColor', 'Call', 'Add', 'Kick', 'SendChatMessage', 'Respawn', 'GiveWeapon', 'AddRemoteCallable', 'CallRemote', 'SetTime', 'Destroy' ]
     }],
-    "no-param-reassign": [1, {
-      "props": false
+    'no-param-reassign': [1, {
+      'props': false
     }],
-    "camelcase": [0]
+    'camelcase': [0]
   }
 }
