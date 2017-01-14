@@ -1,7 +1,13 @@
-# bare-minimum
-This is an example for a bare minimum package in JC3:MP. It provides both a server and client package.
+# Survival Garrigue
+A survival JC3MP package mod
 
----
-Use this package when
-* You want to learn more about creating packages from scratch
-* have good JavaScript knowledge already
+## Implemented :
+### Player Position :
+* When a player connect for the first time he spawn at default spawn
+* Each 5 second the position of the player is saved
+* If the player reconnect he will spawn at his previous saved position
+* If the player die he will spawn at his death position
+
+## Install & Run :
+    npm i
+    npm run watch
