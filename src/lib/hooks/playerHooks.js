@@ -26,7 +26,7 @@ jcmp.events.Add("PlayerReady", (player) => {
         }
     });
 
-    const syncUserPositionWithFirebase = sg.workarounds.watchPlayerIntv(player, setInterval(() => {
+    const syncUserPositionWithFirebase = sg.backWorks.watchPlayerIntv(player, setInterval(() => {
         sg.firebase
             .setForUser(player.id, 'position', getOnlyPosition(player.position))
             .then(() => syncUserPositionWithFirebase());
