@@ -45,7 +45,3 @@ jspm_packages
 
 # Yarn Integrity file
 .yarn-integrity
-
-/lib/
-/main.js
-!/src/main.js

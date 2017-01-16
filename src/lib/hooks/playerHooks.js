@@ -1,5 +1,5 @@
 import { phare as pharePosition } from '../config/position';
-import { getOnlyPosition } from '../helpers/conversion';
+const { playerExists, watchPlayerIntv, getOnlyPosition } = sg.helpers;
 
 jcmp.events.Add('PlayerCreated', player => {
   player.id = player.client.steamId;
@@ -12,8 +12,10 @@ jcmp.events.Add('PlayerCreated', player => {
 jcmp.events.Add('PlayerReady', (player) => {
   sg.firebase.setForUser(player.id, 'username', player.escapedNametagName);
   sg.firebase.getSnapUser(player.id).then((snap) => {
-    if (snap.val().position) {
-      const position = snap.val().position;
+    const playerSnap = snap.val();
+
+    if (playerSnap.position) {
+      const position = playerSnap.position;
       player.respawnPosition = new Vector3f(position.x, position.y + 10, position.z);
       player.Respawn();
     } else {
@@ -22,10 +24,12 @@ jcmp.events.Add('PlayerReady', (player) => {
     }
   });
 
-  const syncUserPositionWithFirebase = sg.backWeorks.watchPlayerIntv(player, setInterval(() => {
-    sg.firebase
-      .setForUser(player.id, 'position', getOnlyPosition(player.position))
-      .then(() => syncUserPositionWithFirebase());
+  const syncUserPositionWithFirebase = watchPlayerIntv(player, setInterval(() => {
+    if (playerExists(player)) {
+      sg.firebase
+        .setForUser(player.id, 'position', getOnlyPosition(player.position))
+        .then(() => syncUserPositionWithFirebase());
+    }
   }, 5000));
 });
 

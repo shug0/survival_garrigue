@@ -5,3 +5,6 @@ export const getOnlyPosition = (vector3f) => (
     z: vector3f.z,
   }
 );
+
+export const vector3f = (position) => new Vector3f(position.x, position.y, position.z);
+
