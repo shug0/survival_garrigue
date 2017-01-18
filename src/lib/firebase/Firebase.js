@@ -25,6 +25,10 @@ class FirebaseLoader {
     return this.firebase.ref(`map/${itemType}`).update({ [newMapItemKey]: newMapItem });
   }
 
+  removeToMap(itemType, key) {
+    this.firebase.ref('map/').child(itemType).child(key).remove();
+  }
+
   getSnapMap(itemType) {
     return this.firebase.ref(`map/${itemType}`).once('value');
   }

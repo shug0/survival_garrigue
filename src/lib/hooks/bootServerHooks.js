@@ -13,6 +13,7 @@ sg.firebase.getSnapMap('vehicules').then((vehicules) => {
       vector3f(vehiculesSnap[key].rotation)
     );
     newVehicleRef.respawnInformation = vehiculesSnap[key];
+    newVehicleRef.key = key;
   });
 
 

@@ -11,6 +11,7 @@ jcmp.events.Add('VehicleDestroyed', vehicle => {
         vector3f(vehicle.respawnInformation.rotation)
       );
       newVehicleRef.respawnInformation = vehicle.respawnInformation;
+      newVehicleRef.key = vehicle.key;
     }
   }, vehicles.spawnTimeout);
 

@@ -1,4 +1,4 @@
 
 export const vehicles = {
-  spawnTimeout : (1000 * 60 * 2)
+  spawnTimeout : (1000 * 60)
 };
