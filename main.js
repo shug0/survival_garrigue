@@ -22,9 +22,13 @@ var _server = require('./lib/helpers/server');
 
 var serverHelpers = _interopRequireWildcard(_server);
 
-var _vehicles = require('./lib/config/vehicles');
+var _vehicles = require('./lib/helpers/vehicles');
 
-var vehiclesConfig = _interopRequireWildcard(_vehicles);
+var vehicleHelpers = _interopRequireWildcard(_vehicles);
+
+var _vehicles2 = require('./lib/config/vehicles');
+
+var vehiclesConfig = _interopRequireWildcard(_vehicles2);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -36,7 +40,7 @@ global.sg = {
   firebase: new _Firebase2.default(),
   commands: jcmp.events.Call('get_command_manager')[0],
   chat: jcmp.events.Call('get_chat')[0],
-  helpers: _extends({}, conversionHelpers, workaroundsHelpers, serverHelpers),
+  helpers: _extends({}, conversionHelpers, workaroundsHelpers, serverHelpers, vehicleHelpers),
   config: _extends({}, vehiclesConfig)
 };
 

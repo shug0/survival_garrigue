@@ -3,6 +3,7 @@ import Firebase from './lib/firebase/Firebase';
 import * as conversionHelpers from './lib/helpers/conversion';
 import * as workaroundsHelpers from './lib/helpers/workarounds';
 import * as serverHelpers from './lib/helpers/server';
+import * as vehicleHelpers from './lib/helpers/vehicles';
 // Config
 import * as vehiclesConfig from './lib/config/vehicles';
 
@@ -16,6 +17,7 @@ global.sg = {
     ...conversionHelpers,
     ...workaroundsHelpers,
     ...serverHelpers,
+    ...vehicleHelpers,
   },
   config: {
     ...vehiclesConfig

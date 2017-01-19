@@ -14,15 +14,16 @@ class FirebaseLoader {
     return this.firebase.ref(`users/${userID}/${key}`).set(value);
   }
 
-  addToMap(itemType, itemHash, itemPosition, itemRotation) {
+  addToMap(itemType, itemHash, itemPosition, itemRotation, next) {
     const newMapItem = {
       hash: itemHash,
       position: itemPosition,
       rotation: itemRotation,
     };
     const newMapItemKey = this.firebase.ref('map/').child(itemType).push().key;
+    this.firebase.ref(`map/${itemType}`).update({ [newMapItemKey]: newMapItem });
 
-    return this.firebase.ref(`map/${itemType}`).update({ [newMapItemKey]: newMapItem });
+    next(newMapItemKey);
   }
 
   removeToMap(itemType, key) {

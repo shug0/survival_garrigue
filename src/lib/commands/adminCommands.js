@@ -10,8 +10,11 @@ sg.commands.category('admin', 'commands that affect admin')
           'vehicules',
           player.vehicle.modelHash,
           getOnlyPosition(player.vehicle.position),
-          getOnlyPosition(player.vehicle.rotation)
-        );
+          getOnlyPosition(player.vehicle.rotation),
+          (key) => {
+            player.vehicle.key = key;
+            sg.chat.send(player, "Vehicle saved.");
+          });
       }
     }
   ))
@@ -24,6 +27,7 @@ sg.commands.category('admin', 'commands that affect admin')
             'vehicules',
             player.vehicle.key
           );
+          sg.chat.send(player, "Vehicle removed.");
         }
       }
     ))
