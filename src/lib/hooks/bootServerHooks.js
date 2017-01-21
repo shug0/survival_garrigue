@@ -1,5 +1,9 @@
 const { echoTitle, echo, newVehicle } = sg.helpers;
 
+sg.firebase.getSnapConfig('admins').then((admins) => {
+  sg.config.admins = admins.val();
+});
+
 sg.firebase.getSnapMap('vehicules').then((vehicules) => {
   echoTitle('Vehicles loading...', 'yellow');
 
