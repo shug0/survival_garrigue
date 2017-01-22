@@ -47,11 +47,27 @@ sg.commands.category('admin', 'commands that affect admin')
       }
   ))
   .add(
+    new sg.commands.Command('jumpto')
+      .description('Teleport player to the specified position instantly')
+      .parameter('x', 'number', 'position x')
+      .parameter('y', 'number', 'position y')
+      .parameter('z', 'number', 'position z')
+      .handler((player, x, y, z) => {
+        if (player.isAdmin) {
+          player.respawnPosition = new Vector3f(x, y + 10, z);
+          console.log(`Respawn à la position ${player.respawnPosition.x}, ${player.respawnPosition.y}, ${player.respawnPosition.z}`);
+          player.Respawn();
+        }
+      }
+  ))
+  .add(
     new sg.commands.Command('s')
       .parameter('item', 'string', 'item to spawn', { isTextParameter: true })
       .description('Spawn testing object')
       .handler((player, item) => {
-        new GameObject(item, player.aimPosition);
+        if (player.isAdmin) {
+          new GameObject(item, player.aimPosition);
+        }
       }
     ))
 
