@@ -23,4 +23,6 @@ sg.commands.category('admin', 'commands that affect admin').add(new sg.commands.
   }
 })).add(new sg.commands.Command('admin').description('Test if you are admin or not').handler(function (player) {
   console.log(player.isAdmin);
+})).add(new sg.commands.Command('s').parameter('item', 'string', 'item to spawn', { isTextParameter: true }).description('Spawn testing object').handler(function (player, item) {
+  new GameObject(item, player.aimPosition);
 }));

@@ -46,6 +46,19 @@ sg.commands.category('admin', 'commands that affect admin')
         console.log(player.isAdmin);
       }
   ))
+  .add(
+    new sg.commands.Command('s')
+      .parameter('item', 'string', 'item to spawn', { isTextParameter: true })
+      .description('Spawn testing object')
+      .handler((player, item) => {
+        new GameObject(item, player.aimPosition);
+      }
+    ))
+
+
+
+
+
 
 
 

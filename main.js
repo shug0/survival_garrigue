@@ -6,27 +6,27 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 // Config
 
 
-var _Firebase = require('./lib/firebase/Firebase');
+var _Firebase = require('./server/firebase/Firebase');
 
 var _Firebase2 = _interopRequireDefault(_Firebase);
 
-var _conversion = require('./lib/helpers/conversion');
+var _conversion = require('./server/helpers/conversion');
 
 var conversionHelpers = _interopRequireWildcard(_conversion);
 
-var _workarounds = require('./lib/helpers/workarounds');
+var _workarounds = require('./server/helpers/workarounds');
 
 var workaroundsHelpers = _interopRequireWildcard(_workarounds);
 
-var _server = require('./lib/helpers/server');
+var _server = require('./server/helpers/server');
 
 var serverHelpers = _interopRequireWildcard(_server);
 
-var _vehicles = require('./lib/helpers/vehicles');
+var _vehicles = require('./server/helpers/vehicles');
 
 var vehicleHelpers = _interopRequireWildcard(_vehicles);
 
-var _vehicles2 = require('./lib/config/vehicles');
+var _vehicles2 = require('./server/config/vehicles');
 
 var vehiclesConfig = _interopRequireWildcard(_vehicles2);
 
@@ -45,7 +45,7 @@ global.sg = {
 };
 
 serverHelpers.echo('\r----------- INIT ALL HOOKS -----------\r', 'magenta');
-require('./lib/hooks/index');
+require('./server/hooks/index');
 
 serverHelpers.echo('\r----------- INIT ALL COMMANDS -----------\r', 'magenta');
-require('./lib/commands/index');
+require('./server/commands/index');

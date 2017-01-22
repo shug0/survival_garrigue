@@ -33,6 +33,7 @@ jcmp.events.Add('PlayerCreated', player => {
 
 jcmp.events.Add('PlayerReady', (player) => {
 
+
   const syncUserPositionWithFirebase = watchPlayerIntv(player, setInterval(() => {
     if (playerExists(player)) {
       sg.firebase
@@ -40,6 +41,11 @@ jcmp.events.Add('PlayerReady', (player) => {
         .then(() => syncUserPositionWithFirebase());
     }
   }, 5000));
+
+  if (!player.isAdmin) {
+    jcmp.events.CallRemote(`set_player_ability`, player, 0xCB836D80, false);
+    jcmp.events.CallRemote(`set_player_ability`, player, 0xE060F641, false);
+  }
 
 });
 

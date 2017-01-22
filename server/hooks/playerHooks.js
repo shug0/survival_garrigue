@@ -44,6 +44,11 @@ jcmp.events.Add('PlayerReady', function (player) {
       });
     }
   }, 5000));
+
+  if (!player.isAdmin) {
+    jcmp.events.CallRemote('set_player_ability', player, 0xCB836D80, false);
+    jcmp.events.CallRemote('set_player_ability', player, 0xE060F641, false);
+  }
 });
 
 jcmp.events.Add('PlayerDeath', function (player) {
