@@ -46,6 +46,18 @@ sg.commands.category('admin', 'commands that affect admin')
         console.log(player.isAdmin);
       }
   ))
+  .add(
+    new sg.commands.Command('jumpto')
+      .description('Teleport player to the specified position instantly')
+      .parameter('x', 'number', 'position x')
+      .parameter('y', 'number', 'position y')
+      .parameter('z', 'number', 'position z')
+      .handler((player, x, y, z) => {
+        player.respawnPosition = new Vector3f(x, y + 10, z);
+        console.log(`Respawn à la position ${player.respawnPosition.x}, ${player.respawnPosition.y}, ${player.respawnPosition.z}`);
+        player.Respawn();
+      }
+  ))
 
 
 
