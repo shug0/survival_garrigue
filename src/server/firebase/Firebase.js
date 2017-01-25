@@ -34,12 +34,16 @@ class FirebaseLoader {
     return this.firebase.ref(`map/${itemType}`).once('value');
   }
 
+  setForItemToMap(type, key, prop, value) {
+    return this.firebase.ref(`map/${type}/${key}/${prop}`).set(value);
+  }
+
   // ----------------------------------------------------------//
   //             Users                                         //
   // ----------------------------------------------------------//
 
-  setForUser(userID, key, value) {
-    return this.firebase.ref(`users/${userID}/${key}`).set(value);
+  setForUser(userID, prop, value) {
+    return this.firebase.ref(`users/${userID}/${prop}`).set(value);
   }
 
   getSnapUser(userID) {
