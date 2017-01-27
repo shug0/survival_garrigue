@@ -52,3 +52,7 @@ jspm_packages
 *.xml
 
 *.iml
+*.idea
+.idea/
+.server/
+.main.js
