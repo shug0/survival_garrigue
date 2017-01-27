@@ -47,4 +47,8 @@ jspm_packages
 .yarn-integrity
 
 # Webstorm conf
-.idea/
+.iml
+.xml
+*.xml
+
+*.iml

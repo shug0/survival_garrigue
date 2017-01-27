@@ -1,0 +1,7 @@
+@import '../../0_Global/var';
+
+.HeaderBar {
+  position: fixed;
+  top: $bodyPadding;
+  right: $bodyPadding;
+}

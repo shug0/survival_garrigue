@@ -1,0 +1,16 @@
+@import './reset';
+
+body, html, #root, main {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+main {
+  background-size: cover;
+  background-image: url('../../../public/img/back-jcmp3.jpg');
+  color: white;
+}
