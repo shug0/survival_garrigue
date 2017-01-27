@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35725707-7d20-4e43-abd7-041d1d54020e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client_package/ui/public/img/back-jcmp3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client_package/ui/src/components/0_Global/var.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client_package/ui/src/components/1_ScreenContainers/HeaderBar/HeaderBar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client_package/ui/src/components/1_ScreenContainers/HeaderBar/HeaderBar.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client_package/ui/src/components/2_Status/StatusContainer/StatusContainer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client_package/ui/src/components/2_Status/StatusContainer/StatusContainer.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client_package/ui/src/components/2_Status/StatusData/StatusData.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client_package/ui/src/components/2_Status/StatusData/StatusData.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/survival_garrigue.iml" afterPath="$PROJECT_DIR$/.idea/survival_garrigue.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client_package/package.json" afterPath="$PROJECT_DIR$/client_package/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client_package/package.json" afterPath="$PROJECT_DIR$/src/client_package/package.json" />
-    </list>
+    <list default="true" id="35725707-7d20-4e43-abd7-041d1d54020e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -166,28 +150,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="survival_garrigue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="survival_garrigue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client_package" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -294,12 +256,12 @@
       <workItem from="1485332564988" duration="1013000" />
       <workItem from="1485333810520" duration="5254000" />
       <workItem from="1485348729803" duration="61000" />
-      <workItem from="1485509922912" duration="5261000" />
+      <workItem from="1485509922912" duration="5363000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13030000" />
+    <option name="totallyTimeSpent" value="13132000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -515,14 +477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client_package/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client_package/ui/src/components/MyComponent/MyComponent.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -616,7 +570,7 @@
         <state relative-caret-position="176">
           <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -673,6 +627,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client_package/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
