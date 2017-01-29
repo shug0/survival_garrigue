@@ -128,6 +128,10 @@ function build(previousSizeMap) {
     var openCommand = process.platform === 'win32' ? 'start' : 'open';
     var homepagePath = require(paths.appPackageJson).homepage;
     var publicPath = config.output.publicPath;
+
+    rimrafSync(paths.uiBuild + '/*');
+    fs.copySync(paths.appBuild, paths.uiBuild )
+
     if (homepagePath && homepagePath.indexOf('.github.io/') !== -1) {
       // "homepage": "http://user.github.io/project"
       console.log('The project was built assuming it is hosted at ' + chalk.green(publicPath) + '.');
@@ -172,7 +176,7 @@ function build(previousSizeMap) {
       console.log('  ' + chalk.cyan('npm') +  ' install -g pushstate-server');
       console.log('  ' + chalk.cyan('pushstate-server') + ' build');
       console.log('  ' + chalk.cyan(openCommand) + ' http://localhost:9000');
-      fs.copySync(paths.appBuild, paths.uiBuild )
+
       console.log();
     }
   });

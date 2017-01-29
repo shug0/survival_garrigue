@@ -1,0 +1,17 @@
+@import '../0_Global/var';
+
+
+.Inventory {
+  padding: $panelPadding;
+
+  position: fixed;
+  bottom: $bodyPadding;
+  right: $bodyPadding;
+  display: block;
+
+
+  color: $panelColor;
+  background-color: $panelBackground;
+  height: 300px;
+  width: 200px;
+}

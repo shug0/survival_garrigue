@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { browserHistory  }  from 'react-router';
 
 // Screen Container Components
 import HeaderBar from './1_ScreenContainers/HeaderBar/HeaderBar';
@@ -13,28 +14,28 @@ class AppContainer extends Component {
 
   constructor() {
     super();
-    this.handlerKeyUp = this.handlerKeyUp.bind(this);
   }
 
-  handlerKeyUp(event) {
-    console.log('yolo');
+  handleKeydown(event) {
+    if (event.key === 'i') {
+      browserHistory.push('inventory');
+    }
+  }
+
+  componentWillMount() {
+    document.addEventListener("keydown", this.handleKeydown, false);
   }
 
   render() {
 
-    const { children, location } = this.props;
-
     return (
-      <main onKeyUp={this.handlerKeyUp}>
+      <main>
 
         <HeaderBar>
             <StatusContainer />
         </HeaderBar>
 
-        {children && React.cloneElement(children, {
-          key: location.pathname
-        })}
-
+        {this.props.children}
 
       </main>
     );
