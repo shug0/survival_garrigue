@@ -18,7 +18,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "babel src -w -d ."
+    "watch": "babel src -w -d . --ignore client-src"
   },
   "jcmp_dependencies": [
     "chat",
