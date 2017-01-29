@@ -14,12 +14,20 @@ class FirebaseLoader {
   //             Map                                           //
   // ----------------------------------------------------------//
 
-  addToMap(itemType, itemHash, itemPosition, itemRotation, next) {
-    const newMapItem = {
+  addToMap(itemType, itemHash, itemPosition, itemRotation, itemOptions = null, next) {
+    let newMapItem = {
       hash: itemHash,
       position: itemPosition,
       rotation: itemRotation,
     };
+
+    if (itemOptions !== null) {
+      newMapItem = {
+        ...newMapItem,
+        options: itemOptions
+      }
+    }
+
     const newMapItemKey = this.firebase.ref('map/').child(itemType).push().key;
     this.firebase.ref(`map/${itemType}`).update({ [newMapItemKey]: newMapItem });
 

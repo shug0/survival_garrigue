@@ -8,11 +8,16 @@ sg.commands.category('admin', 'commands that affect admin')
       if (player.isAdmin) {
 
         if (player.vehicle) {
+          const options = {
+            health: player.vehicle.health
+          };
+
           sg.firebase.addToMap(
             'vehicules',
             player.vehicle.modelHash,
             getOnlyPosition(player.vehicle.position),
             getOnlyPosition(player.vehicle.rotation),
+            options,
             (key) => {
               player.vehicle.key = key;
               sg.chat.send(player, "Vehicle saved.");
@@ -70,6 +75,18 @@ sg.commands.category('admin', 'commands that affect admin')
         }
       }
     ))
+
+  .add(
+    new sg.commands.Command('hv')
+      .parameter('health', 'number', 'Health to 0 from 100')
+      .description('Changing the health of a vehicle')
+      .handler((player, health) => {
+          if (player.isAdmin && player.vehicle) {
+            const maxHealth = player.vehicle.health;
+            player.vehicle.health = maxHealth * health / 100;
+          }
+        }
+    ));
 
 
 

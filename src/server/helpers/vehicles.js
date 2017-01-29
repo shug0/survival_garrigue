@@ -1,6 +1,6 @@
 import { vector3f } from './conversion';
 
-export const newVehicle = (vehicle, dbKey, health = 100) => {
+export const newVehicle = (vehicle, dbKey) => {
 
     let newVehicle = new Vehicle(
       vehicle.hash,
@@ -8,12 +8,12 @@ export const newVehicle = (vehicle, dbKey, health = 100) => {
       vector3f(vehicle.rotation)
     );
 
+    if (vehicle.options !== undefined) {
+        newVehicle.health = vehicle.options.health;
+    }
     newVehicle.respawnInformation = vehicle;
     newVehicle.key = dbKey;
 
-    const maxHealth = newVehicle.health;
-    newVehicle.health = maxHealth / 100 * health;
-
     return newVehicle;
 
-}
+};
