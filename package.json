@@ -1,27 +1,24 @@
 {
   "name": "survival_garrigue",
   "version": "1.0.0",
-  "main": "main.js",
-  "author": "Thomas A <thomas@needacoffee.fr>",
-  "license": "MIT",
-  "dependencies": {
-    "chalk": "^1.1.3",
-    "firebase-admin": "^4.0.4",
-    "request": "^2.79.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.8.0",
-    "babel-core": "^6.21.0",
-    "babel-eslint": "^6.0.4",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-stage-2": "^6.18.0"
-  },
+  "description": "Root survival garrigue app, need to be put at the root of your jc3mp server",
+  "main": "install.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "babel src -w -d . --ignore client-src"
+    "start": "node installServer.js && node installClient.js"
   },
-  "jcmp_dependencies": [
-    "chat",
-    "command-manager"
-  ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shug0/survival_garrigue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shug0/survival_garrigue/issues"
+  },
+  "homepage": "https://github.com/shug0/survival_garrigue#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "fs-extra": "^2.0.0"
+  }
 }

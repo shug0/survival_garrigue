@@ -1,0 +1,16 @@
+{
+    "author": "Thomas A <thomas@needacoffee.fr>",
+    "jcmp_dependencies": [
+        "chat",
+        "command-manager"
+    ],
+    "license": "MIT",
+    "main": "main.js",
+    "name": "survival_garrigue",
+    "version": "1.0.0",
+    "dependencies": {
+      "chalk": "^1.1.3",
+      "firebase-admin": "^4.0.4",
+      "request": "^2.79.0"
+    }
+}
