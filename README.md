@@ -1,6 +1,8 @@
 # Survival Garrigue
 A survival JC3MP package mod
 
+🦊 [TRELLO ROADMAP](https://trello.com/invite/b/QisJA6iI/2e3eb2396ae149a3ef6c6824c41f24c6/jc3-mp-survival-garrigue) 🦊
+
 ## Generate your Firebase Private Key file :
 The Mod is powered with the Database service of Google : Firebase.
 The free version is okay for a normal jc3mp server.
