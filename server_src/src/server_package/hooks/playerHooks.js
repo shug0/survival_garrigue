@@ -1,5 +1,4 @@
-import { phare as pharePosition } from '../config/position';
-const { playerExists, newSurvivalPlayer, watchPlayerIntv, getOnlyPosition } = sg.helpers;
+const { playerExists, watchPlayerIntv, getOnlyPosition } = sg.helpers;
 
 jcmp.events.Add('PlayerCreated', player => {
   // Adding props to player
@@ -19,27 +18,16 @@ jcmp.events.Add('PlayerCreated', player => {
   sg.firebase.getSnapUser(player.id).then((snap) => {
     const playerSnap = snap.val();
 
-    if (playerSnap.position) {
-      // If the player has a stored position in based make it spawn here
-      const position = playerSnap.position;
-      player.respawnPosition = new Vector3f(position.x, position.y + 10, position.z);
-      player.Respawn();
-    } else {
-      // If it's the first login, spawn it to the default position
-      player.respawnPosition = pharePosition;
-      player.Respawn();
-    }
+    setTimeout(() => {
 
-    // Load the survival props of the player
-    if (playerSnap.survival) {
-      player.survival = {
-        ...playerSnap.survival
+      if (playerSnap.position) {
+        // If the player has a stored position in based make it spawn here
+        const position = playerSnap.position;
+        player.respawnPosition = new Vector3f(position.x, position.y + 10, position.z);
+        player.Respawn();
       }
-    } else {
-      player.survival = {
-        ...newSurvivalPlayer()
-      }
-    }
+
+    }, 3000);
 
   });
 
@@ -52,7 +40,6 @@ jcmp.events.Add('PlayerReady', (player) => {
     if (playerExists(player)) {
       sg.firebase
         .setForUser(player.id, 'position', getOnlyPosition(player.position))
-        .then(() => sg.firebase.setForUser(player.id, 'survival', player.survival))
         .then(() => syncUserWithFirebase());
     }
   }, 5000));
